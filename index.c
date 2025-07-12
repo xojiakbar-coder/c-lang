@@ -6,14 +6,11 @@ int main(void) {
     scanf("%d", &value);
 
     int res = 0;
-    for (int i = value - 1; i >= 1; i--) {
-        if (i == value - 1) {
-            res += value * i;
-        } else {
-            res *= i;
-        }
+    for (int i = 0; i <= value; i++) {
+        res += i;
+        printf("%d\n", res);
     }
-    printf("Faktorial natija: %d\n", res);
+    printf("Natija: %d\n", res);
 
     return 0;
 }
