@@ -4,7 +4,16 @@ int main(void) {
     int value;
     printf("Son kiriting: ");
     scanf("%d", &value);
-    if(value % 2 == 0) printf("Juft son: %d\n", value);
-    else printf("Toq son: %d\n", value);
+
+    int res = 0;
+    for (int i = value - 1; i >= 1; i--) {
+        if (i == value - 1) {
+            res += value * i;
+        } else {
+            res *= i;
+        }
+    }
+    printf("Faktorial natija: %d\n", res);
+
     return 0;
 }
