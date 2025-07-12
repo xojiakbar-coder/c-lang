@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build and run C",
+      "type": "shell",
+      "command": "gcc index.c -o index && ./index",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "detail": "Compile and run C program"
+    }
+  ]
+}
