@@ -1,8 +1,12 @@
-app: index.c
-	gcc index.c -o index
+blah: 
+	cc blah.c -o blah
 
-run: index
-	./index
+some_file: other_file
+	echo "Runs second" 
+	touch some_file
+
+other_file:
+	echo "Runs first"
 
 clean:
-	rm -f index
+	rm -f some_file
