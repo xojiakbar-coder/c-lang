@@ -1,12 +1,15 @@
-blah: 
-	cc blah.c -o blah
+some: pen.c
+	echo "This will always run, and runs second"
+	touch pen.c
 
-some_file: other_file
-	echo "Runs second" 
-	touch some_file
+other_target:
+	echo "This runs first"
 
-other_file:
-	echo "Runs first"
+pen:
+	echo "#include <stdio.h>\nint main(void) { \nprint('Hello World!');\nreturn 0;\n}" > pen.c
 
-clean:
-	rm -f some_file
+run: pen.c
+	gcc pen.c -o pen
+
+runs: 
+	./pen
