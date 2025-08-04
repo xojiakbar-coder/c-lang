@@ -1,15 +1,15 @@
-some: pen.c
-	echo "This will always run, and runs second"
-	touch pen.c
+hello:
+	@echo "Hello, World!"
 
-other_target:
-	echo "This runs first"
+FILES := main.c blah.c
+COUNT := one
+COUNT2 := one two
 
-pen:
-	echo "#include <stdio.h>\nint main(void) { \nprint('Hello World!');\nreturn 0;\n}" > pen.c
+print_files:
+	@echo "Files: $(FILES)"
 
-run: pen.c
-	gcc pen.c -o pen
+_count:
+	@printf "Count: %s\n" "$(COUNT)"
 
-runs: 
-	./pen
+_count2:
+	@printf "Count2: %s\n" "$(COUNT2)"
